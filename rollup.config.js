@@ -17,13 +17,14 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
-    // replace({
-    //   process: JSON.stringify({
-    //     env: {
-    //       ...config().parsed
-    //     }
-    //   })
-    // }),
+    replace({
+      process: JSON.stringify({
+        env: {
+          // ...config().parsed
+          API_KEY: process.env.API_KEY
+        }
+      })
+    }),
 
     svelte({
       // enable run-time checks when not in production
