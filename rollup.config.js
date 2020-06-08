@@ -20,9 +20,7 @@ export default {
     replace({
       process: JSON.stringify({
         env: {
-          // ...config().parsed
-          API_KEY: process.env.API_KEY,
-          PROD: production
+          API_KEY: production ? process.env.API_KEY : config().parsed.API_KEY,
         }
       })
     }),
