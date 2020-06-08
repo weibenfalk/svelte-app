@@ -43,26 +43,20 @@
     background: var(--backdrop);
     background-size: cover;
     background-position: center;
-    width: 100%;
     padding: 40px 20px;
-    box-sizing: border-box;
   }
 
   .content {
+    display: flex;
     max-width: 1280px;
-    min-height: 450px;
+    max-height: 700px;
     margin: 0 auto;
     background: rgb(0, 0, 0, 0.7);
     border-radius: 20px;
-    position: relative;
-  }
-
-  .thumb {
-    width: 300px;
-    float: left;
   }
 
   .text {
+    width: 70%;
     padding: 40px;
     color: #fff;
     overflow: hidden;
@@ -100,7 +94,7 @@
     background: #fff;
     color: #000;
     font-weight: 800;
-    border-radius: 25px;
+    border-radius: 50%;
     margin: 0px 0 0 0;
   }
 
@@ -113,13 +107,9 @@
   }
 
   @media screen and (max-width: 768px) {
-    .wrapper {
-      min-height: 600px;
-      height: auto;
-    }
-
-    .thumb {
-      width: 100% !important;
+    .content {
+      display: block;
+      max-height: none;
     }
   }
 
